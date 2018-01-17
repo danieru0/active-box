@@ -16,6 +16,22 @@ body {
     white-space: nowrap; /* 1 */
 }
 
+@mixin button($width) {
+	height: 46px;
+	width: $width;
+	background-color: #e84545;
+	font-family: Raleway;
+	text-transform: uppercase;
+	text-align: center;
+	color: #ffffff;
+	border: none;
+	cursor: pointer;
+	&:focus,
+	&:hover {
+		background-color: #c62323;
+	}
+}
+
 	// MENU
 
 .nav {
@@ -79,7 +95,7 @@ body {
 @media (max-width: 880px) {
 	.nav {
 		.nav__menu {
-			flex-direction: column;
+			justify-content: center;
 			.nav__hamburger {
 				display: block;
 			}
@@ -95,6 +111,10 @@ body {
 				overflow: hidden;
 				height: 0;
 				transition: height 0.5s;
+				left: 0;
+				a {
+					opacity: 1;
+				}
 			}
 			.menu__list.active {
 				height: 190px;
@@ -111,4 +131,32 @@ body {
 	background-image: url("imgs/banner.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.header__title {
+		font-size: 55px;
+		text-transform: uppercase;
+		color: #ffffff;
+		font-family: Open Sans;
+		text-align: center;
+		margin: 0;
+	}
+	.header__desc {
+		font-size: 19px;
+		color: #ffffff;
+		font-family: Raleway;
+		text-align: center;
+	}
+	.header__button {
+		@include button(200px);
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 435px) {
+	.header {
+		height: 900px;
+	}
 }
