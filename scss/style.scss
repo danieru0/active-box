@@ -34,10 +34,35 @@ body {
 
 	// MENU
 
+.nav.sticky {
+	background-color: #292c47;
+	height: 80px;
+	.nav--border {
+		width: 100%;
+	}
+	.nav__menu {
+		.nav__hamburger {
+			top: 24px;
+		}
+	}
+}
+
 .nav {
 	width: 100%;
 	height: 100px;
 	position: fixed;
+	transition: 0.5s;
+	.nav--border {
+		width: 1170px;
+		height: 1px;
+		background-color: #505369;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+		margin-top: -1px;
+		transition: 0.5s;
+	}
 	.nav__menu {
 		width: 1170px;
 		height: 100%;
@@ -56,6 +81,7 @@ body {
 			background-color: transparent;
 			border: none;
 			cursor: pointer;
+			transition: top 0.5s;
 			.fa {
 				font-size: 26px;
 				color: #ffffff;
@@ -93,6 +119,13 @@ body {
 }
 
 @media (max-width: 880px) {
+	.nav.sticky {
+		.nav__menu {
+			.menu__list {
+				top: 81px;
+			}
+		}
+	}
 	.nav {
 		.nav__menu {
 			justify-content: center;
@@ -104,20 +137,21 @@ body {
 				position: absolute;
 				margin: 0;
 				padding: 0;
-				background-color: #505369;
+				background-color: #292c47;
 				text-align: center;
-				top: 100px;
+				top: 101px;
 				width: 100%;
 				overflow: hidden;
 				height: 0;
-				transition: height 0.5s;
+				transition: 0.5s;
 				left: 0;
 				a {
 					opacity: 1;
 				}
 			}
 			.menu__list.active {
-				height: 190px;
+				height: 200px;
+				
 			}
 		}
 	}
@@ -159,4 +193,11 @@ body {
 	.header {
 		height: 900px;
 	}
+}
+
+	// FEATURES
+
+.features {
+	height: 692px;
+	width: 100%;
 }
