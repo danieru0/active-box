@@ -228,15 +228,90 @@ body {
       .work .work__project-container .work__project-overlay p {
         margin: 0;
         font-size: 13px; }
+    .work .work__project-container .work__project-overlay:focus,
     .work .work__project-container .work__project-overlay:hover {
-      opacity: 1; }
+      opacity: 1;
+      outline: none; }
 
 @media (max-width: 1915px) {
   .work {
-    justify-content: center; }
+    justify-content: center;
+    height: 1000px;
+    padding-bottom: 70px; }
     .work .work__project-container {
       margin-left: 1px; } }
+
+@media (max-width: 1427px) {
+  .work {
+    height: 1400px; } }
+
+@media (max-width: 968px) {
+  .work {
+    height: 2900px; } }
 
 @media (min-width: 2560px) {
   .work {
     justify-content: center; } }
+
+.team {
+  width: 100%;
+  height: 780px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .team .team__wrapper {
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-wrap: wrap; }
+    .team .team__wrapper .team__person {
+      width: 270px;
+      height: 580px;
+      font-family: Raleway; }
+      .team .team__wrapper .team__person h3 {
+        color: #2d3033;
+        font-weight: 400;
+        font-size: 22px;
+        margin-bottom: 0; }
+      .team .team__wrapper .team__person .team__person-status {
+        color: #e84545;
+        font-size: 13px;
+        text-transform: uppercase;
+        margin-top: 6px; }
+      .team .team__wrapper .team__person .team__person-desc {
+        color: #6c7279;
+        font-size: 14px; }
+      .team .team__wrapper .team__person .team__person-socials {
+        padding-top: 10px;
+        display: flex; }
+        .team .team__wrapper .team__person .team__person-socials .person-socials__btn {
+          font-size: 19px;
+          background-color: transparent;
+          text-decoration: none;
+          color: #c6cacc;
+          border: 1px solid #c6cacc;
+          cursor: pointer;
+          transition: 0.2s;
+          display: block;
+          width: 40px;
+          height: 40px;
+          margin-right: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .team .team__wrapper .team__person .team__person-socials .person-socials__btn:hover, .team .team__wrapper .team__person .team__person-socials .person-socials__btn:focus {
+            background-color: #c6cacc;
+            color: #ffffff; }
+
+@media (max-width: 1096px) {
+  .team {
+    height: 1250px; }
+    .team .team__wrapper {
+      justify-content: center; }
+      .team .team__wrapper .team__person {
+        margin-left: 4px; } }
+
+@media (max-width: 564px) {
+  .team {
+    height: 2400px; } }
