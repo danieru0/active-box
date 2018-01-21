@@ -52,7 +52,7 @@ body {
 	height: 100px;
 	position: fixed;
 	transition: 0.5s;
-	z-index: 1;
+	z-index: 2;
 	.nav--border {
 		width: 1170px;
 		height: 1px;
@@ -410,5 +410,133 @@ body {
 @media (max-width: 564px) {
 	.team {
 		height: 2400px;
+	}
+}
+
+	// CLIENTS
+
+.clients {
+	width: 100%;
+	height: 500px;
+	display: flex;
+	.clients__images-carousel {
+		width: 997px;
+		height: 500px;
+		overflow: hidden;
+		position: relative;
+		.images-carousel__container {
+			display: flex;
+			position: absolute;
+			left: 0;
+			transition: left 0.25s ease-out;
+		}
+	}
+	.clients__quotes {
+		background-color: #53354a;
+		height: 100%;
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		position: relative;
+		.quotes__text {
+			color: #ffffff;
+			width: 430px;
+			left: 100px;
+			position: absolute;
+			padding-bottom: 100px;
+			visibility: hidden;
+			opacity: 0;
+			transition: 0.4s;
+			.quote {
+				font-family: Cardo;
+				font-size: 28px;
+				letter-spacing: 1px;
+			}
+			.quote-desc {
+				font-family: Raleway;
+				font-weight: bold;
+				text-transform: uppercase;
+				font-size: 13px;
+				margin-top: -5px;
+			}
+		}
+		.quotes__text.active {
+			visibility: visible;
+			opacity: 1;
+		}
+		.quotes__bubbles {
+			margin-left: 270px;
+			margin-top: 260px;
+			z-index: 1;
+			.bubble {
+				border-radius: 100%;
+				width: 13px;
+				height: 13px;
+				background-color: #755d6e;
+				border: none;
+				cursor: pointer;
+				margin-right: 3px;
+				transition: 0.1s;
+				&:hover, &:focus {
+					background-color: #ffffff;
+				}
+			}
+			.bubble.active {
+				background-color: #ffffff;
+			}
+		}
+	}
+}
+
+@media (max-width: 1345px) {
+	.clients {
+		.clients__images-carousel {
+			margin-left: -300px;
+		}
+		.clients__quotes {
+			width: 60%;
+			.quotes__text {
+				left: 30px;
+			}
+			.quotes__bubbles {
+				margin-left: 220px;
+			}
+		}
+	}
+}
+
+@media (max-width: 980px) {
+	.clients {
+		height: 400px;
+		.clients__images-carousel {
+			display: none;
+		}
+		.clients__quotes {
+			width: 100%;
+			align-items: center;
+			.quotes__text {
+				left: 0;
+				right: 0;
+				margin: auto;
+				text-align: center;
+				padding: 0;
+				margin-top: -50px;
+			}
+			.quotes__bubbles {
+				margin-left: 0;
+				margin-top: 200px;
+			}
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.clients {
+		.clients__quotes {
+			.quotes__text {
+				width: 100%;
+			}
+		}
 	}
 }
